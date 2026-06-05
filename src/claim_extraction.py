@@ -11,5 +11,5 @@ class ClaimExtractor:
     def extract(self, text):
         """Splits a block of text into atomic sentences/claims."""
         doc = self.nlp(text)
-        # Filter out very short strings that aren't real claims
+        # Filter out very short strings that aren't real claim
         return [sent.text.strip() for sent in doc.sents if len(sent.text.strip()) > 5]
