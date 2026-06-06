@@ -1,1 +1,1 @@
-Enterprise-grade hallucination detection for RAG pipelines using ONNX-optimized Natural Language Inference
+Enterprise-grade hallucination detection for RAG pipelines using ONNX-optimized Natural Language Inference (NLI)
