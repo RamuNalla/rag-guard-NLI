@@ -34,7 +34,7 @@ class RAGGuardPipeline:
         return results
 
 if __name__ == "__main__":
-    # --- TEST THE PIPELINE ---
+
     source_document = """
     Acme Corp released its Q3 earnings report yesterday. The company revenue grew by 20% compared to last year. 
     The current CEO, Jane Doe, stated that the growth was primarily driven by their new AI software division. 
