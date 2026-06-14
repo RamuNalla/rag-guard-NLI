@@ -1,0 +1,32 @@
+{
+  "source_document": "Acme Corp released its Q3 earnings report yesterday. The company revenue grew by 20% compared to last year. \nThe current CEO, Jane Doe, stated that the growth was primarily driven by their new AI software division. \nHowever, the hardware division saw a 5% decline in sales.",
+  "llm_generated_response": "Acme Corp's revenue grew by 200% in Q3. The CEO, Jane Doe, attributed this to the AI software division. \nThe hardware division was led by John Smith.",
+  "summary": {
+    "total_claims": 3,
+    "label_counts": {
+      "Contradiction": 2,
+      "Neutral": 1
+    },
+    "avg_confidence": 0.9938
+  },
+  "claims": [
+    {
+      "claim": "Acme Corp's revenue grew by 200% in Q3.",
+      "matched_context": "Acme Corp released its Q3 earnings report yesterday. The company revenue grew by 20% compared to last year.",
+      "nli_label": "Contradiction",
+      "confidence": 0.9974
+    },
+    {
+      "claim": "The CEO, Jane Doe, attributed this to the AI software division.",
+      "matched_context": "The current CEO, Jane Doe, stated that the growth was primarily driven by their new AI software division. However, the hardware division saw a 5% decline in sales.",
+      "nli_label": "Neutral",
+      "confidence": 0.9847
+    },
+    {
+      "claim": "The hardware division was led by John Smith.",
+      "matched_context": "However, the hardware division saw a 5% decline in sales. The current CEO, Jane Doe, stated that the growth was primarily driven by their new AI software division.",
+      "nli_label": "Contradiction",
+      "confidence": 0.9994
+    }
+  ]
+}
