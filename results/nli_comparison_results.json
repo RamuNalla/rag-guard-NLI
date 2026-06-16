@@ -1,0 +1,171 @@
+{
+  "baseline": {
+    "backend": "PyTorch MPS/CPU",
+    "load_mem_mb": 183.02,
+    "avg_latency_ms": 29.86,
+    "p50_ms": 19.72,
+    "p95_ms": 89.54,
+    "accuracy": 0.6667,
+    "predictions": [
+      {
+        "premise": "Acme Corp released its Q3 earnings report yesterday. The company revenue grew by 20% compared to last year.",
+        "hypothesis": "Acme Corp's revenue increased in Q3.",
+        "ground_truth": "Entailment",
+        "predicted": "Entailment",
+        "confidence": 0.9962,
+        "correct": true
+      },
+      {
+        "premise": "The current CEO, Jane Doe, stated that the growth was driven by their new AI software division.",
+        "hypothesis": "Jane Doe is the CEO of Acme Corp.",
+        "ground_truth": "Entailment",
+        "predicted": "Neutral",
+        "confidence": 0.9074,
+        "correct": false
+      },
+      {
+        "premise": "The hardware division saw a 5% decline in sales.",
+        "hypothesis": "Hardware sales went down.",
+        "ground_truth": "Entailment",
+        "predicted": "Entailment",
+        "confidence": 0.9974,
+        "correct": true
+      },
+      {
+        "premise": "The company revenue grew by 20% compared to last year.",
+        "hypothesis": "Acme Corp's revenue grew by 200% in Q3.",
+        "ground_truth": "Contradiction",
+        "predicted": "Contradiction",
+        "confidence": 0.6977,
+        "correct": true
+      },
+      {
+        "premise": "The hardware division saw a 5% decline in sales.",
+        "hypothesis": "The hardware division was led by John Smith.",
+        "ground_truth": "Contradiction",
+        "predicted": "Neutral",
+        "confidence": 0.9996,
+        "correct": false
+      },
+      {
+        "premise": "Jane Doe is the CEO of Acme Corp.",
+        "hypothesis": "Acme Corp has no current CEO.",
+        "ground_truth": "Contradiction",
+        "predicted": "Contradiction",
+        "confidence": 0.9997,
+        "correct": true
+      },
+      {
+        "premise": "The current CEO, Jane Doe, stated that the growth was driven by their new AI software division.",
+        "hypothesis": "The CEO attributed the growth to the AI software division.",
+        "ground_truth": "Neutral",
+        "predicted": "Entailment",
+        "confidence": 0.9975,
+        "correct": false
+      },
+      {
+        "premise": "Acme Corp released its Q3 earnings report yesterday.",
+        "hypothesis": "Acme Corp is a publicly traded company.",
+        "ground_truth": "Neutral",
+        "predicted": "Neutral",
+        "confidence": 0.993,
+        "correct": true
+      },
+      {
+        "premise": "The hardware division saw a 5% decline in sales.",
+        "hypothesis": "The hardware division may recover next quarter.",
+        "ground_truth": "Neutral",
+        "predicted": "Neutral",
+        "confidence": 0.9995,
+        "correct": true
+      }
+    ]
+  },
+  "optimized": {
+    "backend": "ONNX Runtime CPU (Int8 quantized)",
+    "load_mem_mb": 652.17,
+    "avg_latency_ms": 7.73,
+    "p50_ms": 7.78,
+    "p95_ms": 9.99,
+    "accuracy": 0.6667,
+    "predictions": [
+      {
+        "premise": "Acme Corp released its Q3 earnings report yesterday. The company revenue grew by 20% compared to last year.",
+        "hypothesis": "Acme Corp's revenue increased in Q3.",
+        "ground_truth": "Entailment",
+        "predicted": "Entailment",
+        "confidence": 0.9943,
+        "correct": true
+      },
+      {
+        "premise": "The current CEO, Jane Doe, stated that the growth was driven by their new AI software division.",
+        "hypothesis": "Jane Doe is the CEO of Acme Corp.",
+        "ground_truth": "Entailment",
+        "predicted": "Neutral",
+        "confidence": 0.9969,
+        "correct": false
+      },
+      {
+        "premise": "The hardware division saw a 5% decline in sales.",
+        "hypothesis": "Hardware sales went down.",
+        "ground_truth": "Entailment",
+        "predicted": "Entailment",
+        "confidence": 0.9969,
+        "correct": true
+      },
+      {
+        "premise": "The company revenue grew by 20% compared to last year.",
+        "hypothesis": "Acme Corp's revenue grew by 200% in Q3.",
+        "ground_truth": "Contradiction",
+        "predicted": "Contradiction",
+        "confidence": 0.9921,
+        "correct": true
+      },
+      {
+        "premise": "The hardware division saw a 5% decline in sales.",
+        "hypothesis": "The hardware division was led by John Smith.",
+        "ground_truth": "Contradiction",
+        "predicted": "Neutral",
+        "confidence": 0.9994,
+        "correct": false
+      },
+      {
+        "premise": "Jane Doe is the CEO of Acme Corp.",
+        "hypothesis": "Acme Corp has no current CEO.",
+        "ground_truth": "Contradiction",
+        "predicted": "Contradiction",
+        "confidence": 0.9992,
+        "correct": true
+      },
+      {
+        "premise": "The current CEO, Jane Doe, stated that the growth was driven by their new AI software division.",
+        "hypothesis": "The CEO attributed the growth to the AI software division.",
+        "ground_truth": "Neutral",
+        "predicted": "Entailment",
+        "confidence": 0.9969,
+        "correct": false
+      },
+      {
+        "premise": "Acme Corp released its Q3 earnings report yesterday.",
+        "hypothesis": "Acme Corp is a publicly traded company.",
+        "ground_truth": "Neutral",
+        "predicted": "Neutral",
+        "confidence": 0.9957,
+        "correct": true
+      },
+      {
+        "premise": "The hardware division saw a 5% decline in sales.",
+        "hypothesis": "The hardware division may recover next quarter.",
+        "ground_truth": "Neutral",
+        "predicted": "Neutral",
+        "confidence": 0.9994,
+        "correct": true
+      }
+    ]
+  },
+  "delta": {
+    "memory_reduction_pct": -256.35,
+    "speedup_x": 3.862,
+    "accuracy_delta": 0.0
+  }
+}
