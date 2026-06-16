@@ -1,6 +1,7 @@
 from src.claim_extraction import ClaimExtractor
 from src.semantic_router import SemanticRouter
 from src.nli_engine import NLIBaselineEngine
+from src.optimized_nli import OptimizedNLIEngine
 import json
 
 class RAGGuardPipeline:
@@ -8,7 +9,7 @@ class RAGGuardPipeline:
         print("Initializing RAGGuard Pipeline...")
         self.extractor = ClaimExtractor()
         self.router = SemanticRouter()
-        self.nli_engine = NLIBaselineEngine()
+        self.nli_engine = OptimizedNLIEngine()
         print("Pipeline ready! Using Apple MPS / CPU.\n")
 
     def evaluate(self, generated_text, source_text):
