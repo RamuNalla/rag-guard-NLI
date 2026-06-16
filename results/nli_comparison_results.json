@@ -1,10 +1,11 @@
 {
   "baseline": {
     "backend": "PyTorch MPS/CPU",
-    "load_mem_mb": 183.02,
-    "avg_latency_ms": 29.86,
-    "p50_ms": 19.72,
-    "p95_ms": 89.54,
+    "disk_size_mb": 541.31,
+    "peak_heap_mb": 0.48,
+    "avg_latency_ms": 18.55,
+    "p50_ms": 17.91,
+    "p95_ms": 27.98,
     "accuracy": 0.6667,
     "predictions": [
       {
@@ -83,10 +84,11 @@
   },
   "optimized": {
     "backend": "ONNX Runtime CPU (Int8 quantized)",
-    "load_mem_mb": 652.17,
-    "avg_latency_ms": 7.73,
-    "p50_ms": 7.78,
-    "p95_ms": 9.99,
+    "disk_size_mb": 164.58,
+    "peak_heap_mb": 0.15,
+    "avg_latency_ms": 5.81,
+    "p50_ms": 5.7,
+    "p95_ms": 6.73,
     "accuracy": 0.6667,
     "predictions": [
       {
@@ -164,8 +166,9 @@
     ]
   },
   "delta": {
-    "memory_reduction_pct": -256.35,
-    "speedup_x": 3.862,
+    "disk_reduction_pct": 69.6,
+    "heap_reduction_pct": 67.99,
+    "speedup_x": 3.194,
     "accuracy_delta": 0.0
   }
 }
