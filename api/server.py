@@ -8,7 +8,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Load the model globally so it stays in RAM and serves requests instantly
+# Load the model globally so it stays in RAM
 print("Starting server and loading ONNX models...")
 pipeline = RAGGuardPipeline()
 
