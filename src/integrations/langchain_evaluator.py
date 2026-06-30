@@ -1,5 +1,5 @@
 from typing import Any, Optional, Dict
-from langchain_core.evaluation import StringEvaluator
+#from langchain_core.evaluation import StringEvaluator
 from src.core import RAGGuardPipeline
 
 class RAGGuardLangChainEvaluator(StringEvaluator):
