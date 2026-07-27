@@ -6,7 +6,7 @@ import time
 class OptimizedNLIEngine:
     def __init__(self, model_path="models/nli_onnx_quantized"):
         print(f"Loading ONNX Quantized model from {model_path}...")
-        # Load the tokenizer
+       
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         
         # Load the ONNX model (Executes on CPU by default via onnxruntime)
